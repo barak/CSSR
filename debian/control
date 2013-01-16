@@ -1,0 +1,21 @@
+Source: cssr
+Section: science
+Priority: extra
+Maintainer: Barak A. Pearlmutter <bap@debian.org>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.4
+Homepage: http://bactra.org/CSSR/
+Vcs-Git: git://git.debian.org/collab-maint/cssr.git
+Vcs-Browser: http://git.debian.org/?p=collab-maint/cssr.git;a=summary
+
+Package: cssr
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Infer a discrete hidden Markov model from time series data.
+ CSSR tries to infer the minimal Markovian model capable of generating
+ a time-series, or set of time-series from the same source.  This
+ involves inferring not just the parameters of the HMM, but also its
+ structure.  The program implements the algorithm proposed in the
+ paper "Blind Construction of Optimal Nonlinear Recursive Predictors
+ for Discrete Sequences" by Cosma Rohilla Shalizi and Kristina Lisa
+ Shalizi, http://arxiv.org/abs/cs.LG/0406011.

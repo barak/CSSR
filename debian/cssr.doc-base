@@ -1,0 +1,15 @@
+Document: cssr
+Title: CSSR Manual
+Author: Cosmo Shalizi et al
+Abstract: This manual describes what CSSR is and how to use it.
+Section: Science/Data Analysis
+
+Format: PDF
+Files: /usr/share/doc/cssr/ReadMe.pdf.gz
+
+Format: text
+Files: /usr/share/doc/cssr/ReadMe.txt.gz
+
+Format: HTML
+Index: /usr/share/doc/cssr/ReadMe.html
+Files: /usr/share/doc/cssr/ReadMe.html
