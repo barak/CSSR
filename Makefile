@@ -1,32 +1,21 @@
-all: main.o hash.o states.o allStates.o parsetree.o g_array.o hash2.o machine.o transtable.o test.o
-	c++ -O -o CSSR main.o hash.o states.o allStates.o parsetree.o g_array.o hash2.o machine.o transtable.o test.o
+all: CSSR
 
-main.o:	Main.cpp Main.h Common.h AllStates.h Machine.h
-	c++ -O -c -o main.o Main.cpp
+obj=Main.o Hash.o States.o AllStates.o ParseTree.o G_Array.o Hash2.o	\
+ Machine.o TransTable.o Test.o
 
-hash.o: Hash.cpp Hash.h States.h Common.h States.cpp
-	c++ -O -c -o hash.o Hash.cpp
+hfiles=AllStates.h Common.h G_Array.h Hash2.h Hash.h Machine.h Main.h	\
+ ParseTree.h States.h Test.h TransTable.h
 
-states.o: States.cpp States.h Common.h ParseTree.h G_Array.h Hash.h
-	c++ -O -c -o states.o States.cpp
+Main: $(obj)
+CSSR: CC=$(CXX)
+CSSR: Main
+	cp Main CSSR
+	chmod +x CSSR
 
-allStates.o: AllStates.cpp AllStates.h States.h Common.h ParseTree.h G_Array.h
-	c++ -O -c -o allStates.o AllStates.cpp
+TAGS: $(obj:.o=.cpp) $(hfiles)
+	etags $^
 
-parsetree.o: ParseTree.cpp ParseTree.h Common.h G_Array.h
-	c++ -O -c -o parsetree.o ParseTree.cpp
+clean:
+	-rm -f $(obj) Main CSSR
 
-g_array.o: G_Array.cpp G_Array.h Common.h
-	c++ -O -c -o g_array.o G_Array.cpp
-
-hash2.o: Hash2.cpp Hash2.h Common.h
-	c++ -O -c -o hash2.o Hash2.cpp
-
-machine.o: Machine.cpp Machine.h States.h Common.h Hash2.h Hash.h
-	c++ -O -c -o machine.o Machine.cpp
-
-transtable.o: TransTable.cpp TransTable.h Common.h States.h
-	c++ -O -c -o transtable.o TransTable.cpp
-
-test.o: Common.h Test.h
-	c++ -O -c -o test.o Test.cpp
+.PHONY: all clean
