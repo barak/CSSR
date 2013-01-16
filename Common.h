@@ -11,10 +11,10 @@
 #include <stdlib.h>
 #include <math.h>
 #include <float.h>
-#include <fstream.h>
+#include <fstream>
 #include <stdio.h>
-#include <iostream.h>
-#include <iomanip.h>
+#include <iostream>
+#include <iomanip>
 #include <string.h>
 #include <ctype.h>
 
@@ -26,5 +26,15 @@
 #define SYMB_SIZE 1      //size of alpha symbol in ascii characters
 #define MAX_STRING 80	 //maximum memory allocation for a generic string
 typedef unsigned long ulong;
+
+using std::cerr;
+using std::cin;
+using std::cout;
+using std::endl;
+using std::ifstream;
+using std::ios;
+using std::ofstream;
+using std::setprecision;
+using std::setw;
 
 #endif
