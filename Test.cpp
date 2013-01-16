@@ -186,7 +186,7 @@ float Test::gammln(float xx)
 }
 
 
-void Test::nerror(char error_text[])
+void Test::nerror(const char error_text[])
 {
   cerr << error_text << endl;
   exit(1);

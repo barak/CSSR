@@ -35,7 +35,7 @@ class Test{
   float gammq(float a, float x);
   void gcf(float *gammcf, float a, float x, float *gln);
   void gser(float *gammser, float a, float x, float *gln);
-  void nerror(char error_text[]);
+  void nerror(const char error_text[]);
   float gammln(float xx);
   void chstwo(double bins1[], int n1, double bins2[], int n2, int nbins,
 	      int knstrn, float *df, float *chsq, double *prob);
