@@ -11,7 +11,7 @@ Vcs-Browser: http://git.debian.org/?p=collab-maint/cssr.git;a=summary
 Package: cssr
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: Infer a discrete hidden Markov model from time series data.
+Description: Infer a discrete Hidden Markov Model from time series data
  CSSR tries to infer the minimal Markovian model capable of generating
  a time-series, or set of time-series from the same source.  This
  involves inferring not just the parameters of the HMM, but also its
