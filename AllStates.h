@@ -47,7 +47,7 @@ class AllStates
   double Compare(int k,int j); 
   double Compare(int k, double newDist[], int count);
   double Compare(State* state, double newDist[], int count);
-  bool CompareToParent(char*& removalString, State*& removalState, 
+  bool CompareToParent(const char*& removalString, State*& removalState, 
 		       ArrayElem* element, double* newDist, int length, 
 		       bool match, int stringCount);
   HashTable* getTable(){return m_table;}
@@ -59,7 +59,7 @@ class AllStates
   void DeAllocateArray(int** stateArray);
   void StoreTransitions(int maxLength, char* alpha);
   void RemoveState(int index);
-  void RemoveAncestors(char*& removalString, State*& removalState);
+  void RemoveAncestors(const char*& removalString, State*& removalState);
   void GetStateDists(ParseTree& parsetree, char input[],
 		     HashTable2* hashtable);   
   void GetStateDistsMulti(ParseTree& parsetree, char input[], 
@@ -74,7 +74,7 @@ class AllStates
   bool MakeNewDetStates(int stateIndex, StringElem** stringArray,
 			int** stateArray, int stringMax, bool isDeterministic,
 			ParseTree& parsetree);
-  bool RePartition(bool match, char* removalString, State* removalState,
+  bool RePartition(bool match, const char* removalString, State* removalState,
 		   ArrayElem* element,double* newDist, int stringCount);
   void CheckConnComponents(ParseTree& parsetree);
   bool RemoveTransientStates(int* stateArray, bool done, int stateCounter, 

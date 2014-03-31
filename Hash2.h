@@ -23,7 +23,7 @@ class HashTable2 {
 
   HashTable2Entry* m_data[HASHSIZE2];
   int Hash(ulong key);
-  ulong CreateKey(char* string);
+  ulong CreateKey(const char* string);
 
  public:
 

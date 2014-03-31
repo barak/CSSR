@@ -28,17 +28,17 @@ class HashTable {
 
   HashTableEntry* m_data[HASHSIZE];
   int Hash(ulong key);
-  ulong CreateKey(char* string);
+  ulong CreateKey(const char* string);
 
  public:
 
   HashTable();
   ~HashTable();
   void Insert(StringElem* elem, State* state);
-  State* WhichState(char* string);
-  int WhichStateNumber(char* string);
+  State* WhichState(const char* string);
+  int WhichStateNumber(const char* string);
   void Print();
-  void RemoveString(char* string);
+  void RemoveString(const char* string);
 };
 
 #endif

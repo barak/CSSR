@@ -221,7 +221,7 @@ void AllStates::CalcNewDist(int length, ParseTree& parsetree)
   int stringCount;
   bool match;
   State* removalState;
-  char* removalString;
+  const char* removalString;
   ArrayElem** list;
   int listSize;
 
@@ -286,7 +286,7 @@ void AllStates::CalcNewDist(int length, ParseTree& parsetree)
 // Post-Cond: ancestors of string are removed from state; if state is left
 //            empty it is then deleted.           
 //////////////////////////////////////////////////////////////////////////
-void AllStates::RemoveAncestors(char*& removalString, State*& removalState)
+void AllStates::RemoveAncestors(const char*& removalString, State*& removalState)
 {
   int removalLength;
 
@@ -330,7 +330,7 @@ void AllStates::RemoveAncestors(char*& removalString, State*& removalState)
 // Post-Cond: history has been added to parent state if it matched, boolean
 //            has been set
 //////////////////////////////////////////////////////////////////////////
-bool AllStates::CompareToParent(char*& removalString, State*& removalState,
+bool AllStates::CompareToParent(const char*& removalString, State*& removalState,
 				ArrayElem* element, double* newDist,
 				int length, bool match, int stringCount)
 {
@@ -377,7 +377,7 @@ bool AllStates::CompareToParent(char*& removalString, State*& removalState,
 // Post-Cond: history has been added to non-parent state if it matched, boolean
 //            has been set
 //////////////////////////////////////////////////////////////////////////
-bool AllStates::RePartition(bool match, char* removalString,
+bool AllStates::RePartition(bool match, const char* removalString,
 			    State* removalState, ArrayElem* element,
 			    double* newDist, int stringCount)
 {

@@ -119,7 +119,7 @@ void HashTable::Insert(StringElem* elem, State* state)
 //In parameter: string to check
 //Return value: pointer to address of appropriate state
 ////////////////////////////////////////////////////////////////
-State* HashTable::WhichState(char* string)
+State* HashTable::WhichState(const char* string)
 {
   if (string == '\0')
     {
@@ -151,7 +151,7 @@ State* HashTable::WhichState(char* string)
 //In parameter: string to check
 //Return value: assigned number of appropriate state
 ////////////////////////////////////////////////////////////////
-int HashTable::WhichStateNumber(char* string)
+int HashTable::WhichStateNumber(const char* string)
 {
   if (string == '\0')
     {
@@ -180,7 +180,7 @@ int HashTable::WhichStateNumber(char* string)
 
 
 
-ulong HashTable::CreateKey(char* string)
+ulong HashTable::CreateKey(const char* string)
 {
   ulong key = 0;
   const char *ptr = string;
@@ -207,7 +207,7 @@ void HashTable::Print()
 }
 
 
-void HashTable::RemoveString(char* string)
+void HashTable::RemoveString(const char* string)
 {
   if (string == '\0')
     {

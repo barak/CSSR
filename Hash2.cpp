@@ -163,7 +163,7 @@ int HashTable2::WhichIndex(char* string)
 }
 
 
-ulong HashTable2::CreateKey(char* string)
+ulong HashTable2::CreateKey(const char* string)
 {
   ulong key = 0;
   const char *ptr = string;
