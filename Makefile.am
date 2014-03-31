@@ -1,4 +1,5 @@
-AM_CXXFLAGS = -Wall -Wextra -Wno-unused-variable				\
+# Ask for all the warnings ... except those that occur.
+AM_CXXFLAGS = -Wall -Wextra -Wno-unused-variable			\
  -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-sign-compare
 
 CSSR_SOURCES = Main.cpp Hash.cpp States.cpp AllStates.cpp		\
@@ -8,4 +9,6 @@ CSSR_SOURCES = Main.cpp Hash.cpp States.cpp AllStates.cpp		\
 
 bin_PROGRAMS = CSSR
 
-doc_DATA = ReadMe.txt ReadMe.pdf ReadMe.ps.gz ReadMe.html
+dist_doc_DATA = ReadMe.txt ReadMe.pdf ReadMe.ps.gz ReadMe.html
+
+EXTRA_DIST = binary01-alphabet COPYING_WARRANTY
